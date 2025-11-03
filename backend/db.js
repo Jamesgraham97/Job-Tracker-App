@@ -1,10 +1,3 @@
-let sqlite3;
-try {
-  sqlite3 = require('sqlite3').verbose();
-} catch (e) {
-  console.log('SQLite not available, using PostgreSQL');
-}
-
 const { Pool } = require('pg');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -26,9 +19,7 @@ if (isProduction) {
   };
 } else {
   // SQLite for local development
-  if (!sqlite3) {
-    throw new Error('SQLite is required for local development');
-  }
+  const sqlite3 = require('sqlite3').verbose();
   
   const sqliteDb = new sqlite3.Database('./jobs.db', (err) => {
     if (err) {
