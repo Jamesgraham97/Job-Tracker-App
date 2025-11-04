@@ -112,6 +112,7 @@ body {
   font-size: 16px;
   transition: all 0.3s ease;
   background: #f7fafc;
+  color: #1a202c;
 }
 
 .form-group input:focus,
@@ -121,6 +122,12 @@ body {
   border-color: #667eea;
   background: white;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  color: #1a202c;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0aec0;
 }
 
 .form-actions {
@@ -187,6 +194,7 @@ body {
   font-size: 16px;
   background: #f7fafc;
   transition: all 0.3s ease;
+  color: #1a202c;
 }
 
 .search-box input:focus {
@@ -194,6 +202,11 @@ body {
   border-color: #667eea;
   background: white;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  color: #1a202c;
+}
+
+.search-box input::placeholder {
+  color: #a0aec0;
 }
 
 .status-filters {
