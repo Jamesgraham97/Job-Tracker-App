@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Job Tracker Assistant",
+  "version": "1.0",
+  "description": "Automatically save job applications to your Job Tracker",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon48.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.linkedin.com/*",
+        "*://*.indeed.com/*",
+        "*://*.greenhouse.io/*",
+        "*://*.lever.co/*"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png"
+  }
+}
