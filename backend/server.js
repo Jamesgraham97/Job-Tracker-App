@@ -74,6 +74,10 @@ app.post('/api/applications', async (req, res) => {
 
 // etc… (keep the PUT and DELETE routes, just remove isProduction checks)
 
+app.get('/', (req, res) => {
+  res.json({ message: 'Job Tracker API is running!', status: 'ok' });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
